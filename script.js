@@ -1,26 +1,74 @@
-const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
-window.addEventListener('load',()=>setTimeout(()=>$('.loader').classList.add('done'),450));
+document.addEventListener("DOMContentLoaded", function () {
+  const $ = (s) => document.querySelector(s);
+  const $$ = (s) => document.querySelectorAll(s);
 
-const phrases=["Mechanical Design","Robotics & Automation","Systems Innovation","Future Engineer"];
-let pi=0,ci=0,deleting=false;
-function type(){const el=$('#typing'),word=phrases[pi];
-el.textContent=word.slice(0,ci);
-if(!deleting&&ci<word.length){ci++;setTimeout(type,75)}
-else if(!deleting){deleting=true;setTimeout(type,1300)}
-else if(ci>0){ci--;setTimeout(type,38)}
-else{deleting=false;pi=(pi+1)%phrases.length;setTimeout(type,350)}}
-type();
+  const loader = $("#loader");
+  setTimeout(() => {
+    if (loader) {
+      loader.style.opacity = "0";
+      loader.style.visibility = "hidden";
+      loader.style.pointerEvents = "none";
+    }
+  }, 1500);
 
-$('#theme').onclick=()=>{document.body.classList.toggle('light');$('#theme').textContent=document.body.classList.contains('light')?'☾':'☼';localStorage.setItem('theme',document.body.classList.contains('light')?'light':'dark')};
-if(localStorage.getItem('theme')==='light'){document.body.classList.add('light');$('#theme').textContent='☾'}
+  const phrases = ["Mechanical Design", "Robotics & Automation", "Systems Innovation", "Future Engineer"];
+  let pi = 0, ci = 0, deleting = false;
+  const typing = $("#typing");
 
-$('#menu').onclick=()=>{$('.nav').classList.toggle('open')};
-$$('#nav a').forEach(a=>a.onclick=()=>$('.nav').classList.remove('open'));
+  function type() {
+    if (!typing) return;
+    const word = phrases[pi];
+    typing.textContent = word.slice(0, ci);
+    if (!deleting && ci < word.length) {
+      ci++;
+      setTimeout(type, 70);
+    } else if (!deleting) {
+      deleting = true;
+      setTimeout(type, 1200);
+    } else if (ci > 0) {
+      ci--;
+      setTimeout(type, 35);
+    } else {
+      deleting = false;
+      pi = (pi + 1) % phrases.length;
+      setTimeout(type, 300);
+    }
+  }
+  type();
 
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-$$('.reveal').forEach(x=>io.observe(x));
+  const theme = $("#theme");
+  function applyTheme(mode) {
+    document.body.classList.toggle("light", mode === "light");
+    if (theme) theme.textContent = mode === "light" ? "☾" : "☼";
+    localStorage.setItem("portfolio-theme", mode);
+  }
+  applyTheme(localStorage.getItem("portfolio-theme") || "dark");
+  if (theme) theme.addEventListener("click", () => {
+    applyTheme(document.body.classList.contains("light") ? "dark" : "light");
+  });
 
-const top=$('#top');window.addEventListener('scroll',()=>top.classList.toggle('show',scrollY>500));
-top.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+  const menu = $("#menu");
+  const nav = $(".nav");
+  if (menu) menu.addEventListener("click", () => nav.classList.toggle("open"));
+  $$("#nav a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
 
-document.addEventListener('mousemove',e=>{const c=document.querySelector('.cursor');if(innerWidth>900){c.style.transform=`translate(${e.clientX}px,${e.clientY}px)`}});
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  }, {threshold: 0.1});
+  $$(".reveal").forEach(el => observer.observe(el));
+
+  const top = $("#top");
+  window.addEventListener("scroll", () => {
+    if (top) top.classList.toggle("show", window.scrollY > 450);
+  });
+  if (top) top.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
+
+  const cursor = $(".cursor");
+  document.addEventListener("mousemove", e => {
+    if (cursor && window.innerWidth > 900) {
+      cursor.style.transform = `translate(${e.clientX}px,${e.clientY}px)`;
+    }
+  });
+});

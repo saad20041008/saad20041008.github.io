@@ -1,14 +1,8 @@
 # SAAD BIN KAMAL Portfolio
 
-GitHub Pages-ready static portfolio.
+Upload the contents of this folder to the root of `saad20041008.github.io`.
 
-## Deploy
-1. Upload all files in this ZIP to your GitHub repository.
-2. Commit/push them.
-3. In GitHub: Settings → Pages → Deploy from branch → select `main` and `/ (root)`.
-4. Save. Your portfolio will be published by GitHub Pages.
+GitHub Pages:
+Settings → Pages → Deploy from branch → `main` → `/ (root)` → Save.
 
-## Notes
-- Replace `assets/Saad_Bin_Kamal_CV.txt` with your actual PDF CV and change the two `.txt` links in `index.html` back to `.pdf`.
-- The contact form uses FormSubmit and sends to `extraone20041008@gmail.com`.
-- Social links are already connected.
+Replace `assets/Saad_Bin_Kamal_CV.txt` with your real CV PDF later and update the two CV links in `index.html` to the PDF filename.
