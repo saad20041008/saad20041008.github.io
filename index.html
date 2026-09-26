@@ -1,10 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Saad's Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SAAD BIN KAMAL | Portfolio</title>
+<meta name="description" content="SAAD BIN KAMAL - Mechatronics Engineering student, mechanical design, robotics and technology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, I'm Saad</h1>
-    <p>My portfolio is coming soon.</p>
+<div class="loader"><div class="loader-ring"></div><span>SBK</span></div>
+
+<header class="nav">
+  <a class="brand" href="#home">SBK<span>.</span></a>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+    <a href="#resume">Resume</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#connect">Connect</a>
+  </nav>
+  <div class="nav-actions">
+    <button id="theme" class="icon-btn" aria-label="Toggle dark/light mode">☼</button>
+    <button id="menu" class="icon-btn menu-btn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<aside class="social-rail">
+  <a href="mailto:extraone20041008@gmail.com" title="Email">✉</a>
+  <a href="https://www.instagram.com/saad20041008/" target="_blank" rel="noopener" title="Instagram">◎</a>
+  <a href="https://github.com/saad20041008" target="_blank" rel="noopener" title="GitHub">◈</a>
+  <a href="https://wa.me/60143827283" target="_blank" rel="noopener" title="WhatsApp">◌</a>
+</aside>
+
+<main>
+<section id="home" class="hero section">
+  <div class="hero-copy reveal">
+    <div class="eyebrow"><span></span> MECHATRONICS ENGINEERING • APU</div>
+    <h1>SAAD<br><span>BIN KAMAL</span></h1>
+    <div class="typing"><span id="typing"></span><span class="caret">|</span></div>
+    <p class="hero-text">Mechatronics Engineering student at APU. Passionate about mechanical design, robotics & technology. Learning, building, improving. 🚀</p>
+    <div class="hero-buttons">
+      <a class="btn primary" href="#projects">Explore Projects <b>↗</b></a>
+      <a class="btn ghost" href="assets/Saad_Bin_Kamal_CV.txt" download>Download CV <b>↓</b></a>
+    </div>
+    <div class="mini-stats"><div><strong>3.3</strong><span>CGPA</span></div><div><strong>3+</strong><span>Core Areas</span></div><div><strong>∞</strong><span>Curiosity</span></div></div>
+  </div>
+  <div class="mechanical reveal">
+    <div class="blueprint">
+      <div class="gear gear-a"></div><div class="gear gear-b"></div><div class="gear gear-c"></div>
+      <div class="shaft"></div><div class="orbital"></div><div class="node n1"></div><div class="node n2"></div>
+      <div class="tech-label">SYSTEM // 01</div><div class="tech-code">MEC<br>ROBO<br>AUTO</div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section split">
+  <div class="section-tag">01 / ABOUT</div>
+  <div class="section-content reveal">
+    <h2>Engineering is not<br><span>just a degree.</span></h2>
+    <p>I am a Mechatronics Engineering student at Asia Pacific University, Malaysia, interested in the intersection of mechanical systems, robotics, automation and programming.</p>
+    <p>I like understanding how systems work, breaking complex problems into smaller pieces, then building and improving the solution.</p>
+    <blockquote>“Build. Understand. Improve. Repeat.”</blockquote>
+  </div>
+</section>
+
+<section id="skills" class="section split">
+  <div class="section-tag">02 / SKILLS</div>
+  <div class="section-content reveal">
+    <h2>Tools for turning<br><span>ideas into systems.</span></h2>
+    <div class="skill-grid">
+      <div class="skill-card"><small>01</small><h3>Programming</h3><p>C • C++ • Python</p><div class="meter"><i style="width:72%"></i></div><em>Intermediate</em></div>
+      <div class="skill-card"><small>02</small><h3>Mechanical</h3><p>SolidWorks • Mechanical Design</p><div class="meter"><i style="width:78%"></i></div></div>
+      <div class="skill-card"><small>03</small><h3>Systems</h3><p>Robotics • Automation</p><div class="meter"><i style="width:68%"></i></div></div>
+      <div class="skill-card"><small>04</small><h3>Creative</h3><p>Programming • Graphic Design</p><div class="meter"><i style="width:70%"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="resume" class="section resume-section">
+  <div class="section-tag">03 / RESUME</div>
+  <div class="section-content reveal">
+    <div class="resume-box">
+      <div><span class="resume-label">CURRENT FOCUS</span><h2>Future engineer & researcher focused on systems innovation.</h2></div>
+      <a class="btn primary" href="assets/Saad_Bin_Kamal_CV.txt" download>Download CV ↓</a>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section split">
+  <div class="section-tag">04 / PROJECTS</div>
+  <div class="section-content reveal">
+    <h2>Building things<br><span>that can move.</span></h2>
+    <div class="project-list">
+      <article class="project"><span>01</span><div><h3>Mechanical Design Lab</h3><p>CAD-driven mechanical design and system thinking using SolidWorks.</p></div><b>↗</b></article>
+      <article class="project"><span>02</span><div><h3>Robotics & Automation</h3><p>Exploring robotic mechanisms, automation logic and mechatronic systems.</p></div><b>↗</b></article>
+      <article class="project"><span>03</span><div><h3>Programming Systems</h3><p>Developing foundations in C, C++ and Python for engineering applications.</p></div><b>↗</b></article>
+    </div>
+    <p class="note">Project links can be added here as your work grows.</p>
+  </div>
+</section>
+
+<section id="education" class="section split">
+  <div class="section-tag">05 / EDUCATION</div>
+  <div class="section-content reveal">
+    <h2>The foundation<br><span>behind the build.</span></h2>
+    <div class="timeline">
+      <div class="edu"><span class="year">CURRENT</span><div><h3>Asia Pacific University, Malaysia</h3><p>Saad bin Kamal · 2nd Year, Sem 3<br>Mechatronics Engineering</p><strong>CGPA 3.3</strong></div></div>
+      <div class="edu"><span class="year">HSC</span><div><h3>Govt. Science College, Bangladesh</h3><p>Higher Secondary Certificate</p><strong>GPA 5.00</strong></div></div>
+      <div class="edu"><span class="year">SSC</span><div><h3>Darunnajat Siddikia Kamil Madrasah</h3><p>Secondary School Certificate</p><strong>GPA 5.00</strong></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="connect" class="section connect">
+  <div class="section-tag">06 / CONNECT</div>
+  <div class="connect-wrap reveal">
+    <div><h2>Have an idea?<br><span>Let's connect.</span></h2><p>Send a message through the form or reach out directly.</p>
+      <div class="direct"><a href="mailto:extraone20041008@gmail.com">extraone20041008@gmail.com</a><a href="https://wa.me/60143827283" target="_blank" rel="noopener">+60 14-382 7283</a></div>
+    </div>
+    <form id="contactForm" action="https://formsubmit.co/extraone20041008@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Portfolio Contact - Saad Bin Kamal">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <label>Name<input name="name" required placeholder="Your name"></label>
+      <label>Email<input type="email" name="email" required placeholder="you@example.com"></label>
+      <label>Message<textarea name="message" required rows="5" placeholder="Write your message..."></textarea></label>
+      <button class="btn primary" type="submit">Send Message <b>↗</b></button>
+      <p class="form-note">The first submission may require a one-time FormSubmit email activation.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><span>© SAAD BIN KAMAL</span><span>ALL RIGHTS RESERVED.</span></footer>
+<button id="top" class="top-btn" aria-label="Back to top">↑</button>
+<script src="script.js"></script>
 </body>
 </html>
