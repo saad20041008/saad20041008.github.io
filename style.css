@@ -45,3 +45,12 @@ footer:before{content:"";position:absolute;top:0;left:50%;width:130px;height:1px
   .social-rail a{width:38px;height:38px;border-radius:11px}
   footer{padding-bottom:90px}
 }
+
+/* Final cleanup */
+.connect-wrap>div>p{max-width:520px}
+.brand{display:flex;align-items:center;gap:8px}
+.brand-mark{width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--accent);border-radius:10px;color:var(--accent);font:800 15px/1 "Space Grotesk";position:relative;box-shadow:inset 0 0 0 1px rgba(215,255,56,.08),0 0 18px rgba(215,255,56,.06)}
+.brand-mark:before{content:"";position:absolute;inset:5px;border:1px dashed rgba(215,255,56,.35);border-radius:7px}
+.brand-name{font:700 22px/1 "Space Grotesk";letter-spacing:-1px}
+.brand-dot{color:var(--accent)}
+.direct{display:none}
